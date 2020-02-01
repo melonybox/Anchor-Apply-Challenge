@@ -25,8 +25,11 @@ const findMinChar = (stringInput) => {
       uniqArr.push(Object.keys(stringSorted)[j])
       if (x.length > 1) {
         const amountTotal = x.reduce((total, num) => total + num)
-        if (amountTotal >= 50) {
-          return console.log(uniqArr)
+        if (amountTotal >= (stringArr.length-50)) {
+          finalArr = [...uniqArr.slice(0,(uniqArr.length - 1))]
+          finalArrAmount = [...x.slice(0,(uniqArr.length - 1))].reduce((total, num) => total + num)
+          return console.log(finalArr, finalArr.length, finalArrAmount, (stringArr.length - finalArrAmount))
+          // console.log(Final Unique Array, Final Array Length, Final Array Character Amount, Final Paragraph Length)
         }
       }
     }
