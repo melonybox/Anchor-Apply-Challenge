@@ -2,15 +2,22 @@ const paraString = "If you want to jumpstart the process of talking to us about 
 
 const findMinChar = (stringInput) => {
   const stringArr = stringInput.split("")
-  let stringObj = []
+  let stringObj = {}
+  let uniqArr = []
 
   stringArr.forEach(char => {
     stringObj[char] === undefined ? stringObj[char] = 1 : stringObj[char]++
   })
 
-  debugger
+  for (let i = 0; Object.keys(stringObj).length > i; i++) {
+    let x = []
+    uniqArr.push(x)
+    for (let j = i; Object.keys(stringObj).length > j; j++) {
+      x.push(Object.values(stringObj)[j])
+    }
+  }
 
-  return Object.keys(stringObj).length
+  return console.log(uniqArr)
 }
 
-console.log(findMinChar(paraString))
+findMinChar(paraString)
