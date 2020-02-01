@@ -4,7 +4,7 @@
 
 A challenge that is now completed.
 
-Array length of 30 unique character.<br>
+Array length of 30 unique characters.<br>
 71 characters remaining in initial paragraph.
 
 ### `node challenge.js`
